@@ -1,100 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --primary-font-color: #7184be;
-  --primary-bg-color: #e3e7f2;
+  --roxy-primary-font-color: #7184be !important;
+  --roxy-background-color: #e3e7f2 !important;
+  --hu_tao-background-color: #7e432f;
+  --hu-tao-accent-color: #fffbf8;
+  --hu_tao-primary-font-color: #eeaf57;
 }
 
 body {
-  background-color: var(--primary-bg-color);
-  font-family: var(--font-poppins);
-  color: var(--primary-font-color);
+  font-family: var(--font-poppins, sans-serif);
   user-select: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 26px;
-  font-weight: 700;
+.text-roxy-primary-font {
+  color: var(--roxy-primary-font-color);
 }
-.main {
-  /* transform-[scale(.7, 1.6)] font-[fantasy]  */
+
+.bg-roxy-bg {
+  background-color: var(--roxy-background-color);
+}
+
+.roxy-main-text {
   transform: scale(0.7, 1.4);
   font-family: fantasy;
   line-height: 1.2;
 }
-.head {
-  transition-duration: 700ms;
-  animation: headerAnim 700ms forwards;
-}
-
-@keyframes headerAnim {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-.leftHeaderText {
-  transition-duration: 700ms;
-  animation: leftHeaderTextAnim 700ms forwards;
-}
-
-@keyframes leftHeaderTextAnim {
-  from {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-.rightHeaderText {
-  transition-duration: 700ms;
-  animation: rightHeaderTextAnim 700ms forwards;
-}
-
-@keyframes rightHeaderTextAnim {
-  from {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-.mainText {
-  transition-duration: 700ms;
-  animation: mainTextAnim 700ms forwards;
-}
-
-@keyframes mainTextAnim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.mainImage {
-  transition-duration: 700ms;
-  animation: mainImageAnim 700ms forwards;
-}
-
-@keyframes mainImageAnim {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+html {
+  scrollbar-width: none;
+} /* Firefox */
+body {
+  -ms-overflow-style: none;
+} /* IE and Edge */
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+} /* Chrome */
